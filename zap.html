@@ -1,1 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhatsApp ARXX</title>
 
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#111;
+      color:white;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      height:100vh;
+      padding:20px;
+    }
+
+    .container{
+      max-width:700px;
+      width:100%;
+      background:#1d1d1d;
+      padding:50px;
+      border-radius:20px;
+      text-align:center;
+      box-shadow:0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    h1{
+      font-size:55px;
+      color:#25D366;
+      margin-bottom:20px;
+    }
+
+    p{
+      font-size:20px;
+      line-height:1.8;
+      margin-bottom:40px;
+      color:#ddd;
+    }
+
+    .botoes{
+      display:flex;
+      gap:20px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:16px 35px;
+      background:#25D366;
+      color:#000;
+      text-decoration:none;
+      border-radius:10px;
+      font-weight:bold;
+      transition:0.3s;
+      font-size:18px;
+    }
+
+    .btn:hover{
+      transform:scale(1.05);
+    }
+
+    .voltar{
+      margin-top:35px;
+      display:block;
+      color:#aaa;
+      text-decoration:none;
+      font-size:16px;
+    }
+
+    .voltar:hover{
+      color:white;
+    }
+
+    @media(max-width:768px){
+
+      h1{
+        font-size:40px;
+      }
+
+      p{
+        font-size:18px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>
+      WhatsApp ARXX
+    </h1>
+
+    <p>
+      Escolha com quem deseja entrar em contato pelo WhatsApp.
+    </p>
+
+    <div class="botoes">
+
+      <a class="btn" href="https://wa.me/5599999999999" target="_blank">
+        Carlos
+      </a>
+
+      <a class="btn" href="https://wa.me/5588888888888" target="_blank">
+        William
+      </a>
+
+    </div>
+
+    <a class="voltar" href="index.html">
+      ← Voltar ao site
+    </a>
+
+  </div>
+
+</body>
+</html>
