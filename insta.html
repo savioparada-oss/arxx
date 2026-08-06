@@ -1,105 +1,99 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Instagram ARXX</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp ARXX</title>
 
-  <style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial, sans-serif;
-    }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
 
-    body{
-      background:#111;
-      color:white;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      height:100vh;
-      text-align:center;
-      padding:20px;
-    }
+        h1 {
+            color: #222;
+            margin-bottom: 10px;
+        }
 
-    .container{
-      max-width:650px;
-      background:#1d1d1d;
-      padding:50px;
-      border-radius:20px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.4);
-    }
+        p {
+            color: #666;
+            margin-bottom: 30px;
+        }
 
-    h1{
-      font-size:55px;
-      color:#f7b500;
-      margin-bottom:20px;
-    }
+        .botoes {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
 
-    p{
-      font-size:20px;
-      line-height:1.8;
-      margin-bottom:35px;
-      color:#ddd;
-    }
+        .btn {
+            display: block;
+            padding: 15px;
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
 
-    .btn{
-      display:inline-block;
-      padding:16px 35px;
-      background:#f7b500;
-      color:#000;
-      text-decoration:none;
-      border-radius:10px;
-      font-weight:bold;
-      transition:0.3s;
-      font-size:18px;
-    }
+        .btn:hover {
+            background: #1ebe5d;
+            transform: translateY(-2px);
+        }
 
-    .btn:hover{
-      transform:scale(1.05);
-    }
+        .voltar {
+            display: inline-block;
+            margin-top: 25px;
+            color: #555;
+            text-decoration: none;
+        }
 
-    .voltar{
-      margin-top:25px;
-      display:block;
-      color:#aaa;
-      text-decoration:none;
-      font-size:16px;
-    }
-
-    .voltar:hover{
-      color:white;
-    }
-
-  </style>
-
+        .voltar:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
-
 <body>
 
-  <div class="container">
+    <div class="container">
+        <h1>WhatsApp ARXX</h1>
 
-    <h1>
-      Instagram Carlos
-    </h1>
+        <p>
+            Escolha com quem deseja entrar em contato pelo WhatsApp.
+        </p>
 
-    <p>
-      Clique no botão abaixo para acessar o Instagram do Carlos
-      e acompanhar os projetos, obras e resultados realizados pela ARXX.
-    </p>
+        <div class="botoes">
+            <a class="btn" href="https://wa.me/5531975659230" target="_blank">
+                Carlos
+            </a>
 
-    <a class="btn" href="https://instagram.com/carlos" target="_blank">
-      Abrir Instagram
-    </a>
+            <a class="btn" href="https://wa.me/5531992847464" target="_blank">
+                William
+            </a>
+        </div>
 
-    <a class="voltar" href="index.html">
-      ← Voltar ao site
-    </a>
-
-  </div>
+        <a class="voltar" href="index.html">
+            ← Voltar ao site
+        </a>
+    </div>
 
 </body>
 </html>
