@@ -1,342 +1,552 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PODERONE</title>
 
-  <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial, sans-serif;
-      scroll-behavior:smooth;
-    }
+<title>PODERONE | Construindo resultados reais</title>
 
-    body{
-      background:#111;
-      color:white;
-    }
+<style>
 
-    header{
-      position:fixed;
-      top:0;
-      width:100%;
-      padding:20px 8%;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      background:#000;
-      z-index:1000;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
-    .logo{
-      font-size:30px;
-      font-weight:bold;
-      color:#f7b500;
-    }
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+}
 
-    nav a{
-      color:white;
-      text-decoration:none;
-      margin-left:25px;
-      transition:0.3s;
-    }
 
-    nav a:hover{
-      color:#f7b500;
-    }
+/* MENU */
 
-    .hero{
-      height:100vh;
-      background:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1600&auto=format&fit=crop') center/cover;
-      display:flex;
-      align-items:center;
-      padding:0 8%;
-      position:relative;
-    }
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.8);
+    z-index: 10;
+}
 
-    .overlay{
-      position:absolute;
-      inset:0;
-      background:rgba(0,0,0,0.65);
-    }
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+}
 
-    .hero-content{
-      position:relative;
-      z-index:2;
-      max-width:700px;
-    }
 
-    .hero h1{
-      font-size:60px;
-      margin-bottom:20px;
-    }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 16px;
+}
 
-    .hero p{
-      font-size:20px;
-      line-height:1.7;
-      margin-bottom:30px;
-    }
+nav a:hover {
+    color: #aaa;
+}
 
-    .btn{
-      display:inline-block;
-      padding:15px 30px;
-      background:#f7b500;
-      color:#000;
-      text-decoration:none;
-      border-radius:10px;
-      font-weight:bold;
-      transition:0.3s;
-      margin-right:15px;
-      margin-top:10px;
-    }
 
-    .btn:hover{
-      transform:scale(1.05);
-    }
 
-    section{
-      padding:100px 8%;
-    }
+/* HERO */
 
-    .title{
-      font-size:40px;
-      margin-bottom:40px;
-      color:#f7b500;
-    }
+.hero {
 
-    .sobre p{
-      max-width:800px;
-      line-height:1.8;
-      font-size:18px;
-    }
+    height: 100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+    url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1600");
 
-    .galeria{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-      gap:20px;
-    }
+    background-size: cover;
+    background-position: center;
 
-    .galeria img{
-      width:100%;
-      height:260px;
-      object-fit:cover;
-      border-radius:14px;
-      transition:0.3s;
-    }
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
 
-    .galeria img:hover{
-      transform:scale(1.03);
-    }
+}
 
-    .servicos{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:20px;
-    }
 
-    .card{
-      background:#1d1d1d;
-      padding:35px;
-      border-radius:14px;
-      transition:0.3s;
-    }
+.hero-content {
 
-    .card:hover{
-      transform:translateY(-5px);
-      background:#252525;
-    }
+    max-width:700px;
 
-    .card h3{
-      margin-bottom:15px;
-      color:#f7b500;
-    }
+}
 
-    .contato{
-      text-align:center;
-    }
 
-    .contato p{
-      margin-bottom:30px;
-      font-size:20px;
-    }
+.hero h1 {
 
-    footer{
-      background:#000;
-      text-align:center;
-      padding:25px;
-      color:#999;
-    }
+    font-size:55px;
+    margin-bottom:20px;
 
-    .whatsapp{
-      position:fixed;
-      right:20px;
-      bottom:20px;
-      width:65px;
-      height:65px;
-      border-radius:50%;
-      background:#25D366;
-      color:white;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-decoration:none;
-      font-size:30px;
-      z-index:999;
-    }
+}
 
-    @media(max-width:768px){
 
-      nav{
-        display:none;
-      }
+.hero p {
 
-      .hero h1{
-        font-size:42px;
-      }
+    font-size:20px;
+    color:#ddd;
+    margin-bottom:35px;
 
-    }
+}
 
-  </style>
+
+.btn {
+
+    display:inline-block;
+    background:white;
+    color:black;
+
+    padding:15px 35px;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    margin:10px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+
+.btn:hover {
+
+    transform:translateY(-5px);
+    background:#ddd;
+
+}
+
+
+
+/* SEÇÕES */
+
+
+section {
+
+    padding:80px 10%;
+
+}
+
+
+.title {
+
+    text-align:center;
+
+    font-size:35px;
+
+    margin-bottom:30px;
+
+}
+
+
+
+section p {
+
+    max-width:900px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+    color:#ccc;
+
+    text-align:center;
+
+}
+
+
+
+/* GALERIA */
+
+
+.galeria {
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+    margin-top:40px;
+
+}
+
+
+.galeria img {
+
+    width:100%;
+
+    height:250px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+}
+
+
+
+/* SERVIÇOS */
+
+
+.servicos {
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+    margin-top:40px;
+
+}
+
+
+.card {
+
+    background:#1b1b1b;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+}
+
+
+.card h3 {
+
+    margin-bottom:15px;
+
+}
+
+
+.card p {
+
+    color:#aaa;
+
+}
+
+
+
+
+/* CONTATO */
+
+
+#contato {
+
+    text-align:center;
+
+    padding-bottom:100px;
+
+}
+
+
+
+/* MOBILE */
+
+
+@media(max-width:900px){
+
+
+header {
+
+    flex-direction:column;
+
+}
+
+
+nav {
+
+    margin-top:15px;
+
+}
+
+
+.hero h1 {
+
+    font-size:38px;
+
+}
+
+
+.galeria {
+
+    grid-template-columns:1fr;
+
+}
+
+
+.servicos {
+
+    grid-template-columns:1fr;
+
+}
+
+
+}
+
+
+
+</style>
+
+
 </head>
+
 
 <body>
 
-  <header>
 
-    <div class="logo">
-      ARXX
-    </div>
 
-    <nav>
-      <a href="#sobre">Sobre</a>
-      <a href="#projetos">Projetos</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#contato">Contato</a>
-    </nav>
+<header>
 
-  </header>
+<div class="logo">
+PODERONE
+</div>
 
-  <section class="hero">
 
-    <div class="overlay"></div>
+<nav>
 
-    <div class="hero-content">
+<a href="#sobre">Sobre</a>
 
-      <h1>
-        Construindo resultados reais
-      </h1>
+<a href="#projetos">Projetos</a>
 
-      <p>
-        Especialistas em obras, reformas e acabamentos com alta produtividade e qualidade.
-      </p>
+<a href="#servicos">Serviços</a>
 
-      <a class="btn" href="zap.html">
-        Instagram
-      </a>
+<a href="#contato">Contato</a>
 
-      <a class="btn" href="insta.html">
-        WhatsApp
-      </a>
+</nav>
 
-    </div>
 
-  </section>
+</header>
 
-  <section id="sobre" class="sobre">
 
-    <h2 class="title">
-      Sobre a Poderone
-    </h2>
 
-    <p>
-     A PODERONE CONSTRUÇÕES é especialista em ICF ARXX, oferecendo soluções inovadoras e sustentáveis para projetos residenciais e comerciais. 
-Com uma equipe qualificada e foco em qualidade, a empresa garante construções mais rápidas, eficientes e com excelente performance térmica e acústica. 
-Seu compromisso é entregar obras que superem as expectativas dos clientes, aliando tecnologia e excelência em cada etapa.
-    </p>
 
-  </section>
 
-  <section id="projetos">
+<section class="hero">
 
-    <h2 class="title">
-      Projetos realizados
-    </h2>
 
-    <div class="galeria">
+<div class="hero-content">
 
-      <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200&auto=format&fit=crop">
 
-      <img src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?q=80&w=1200&auto=format&fit=crop">
+<h1>
+Construindo resultados reais
+</h1>
 
-      <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop">
 
-    </div>
+<p>
+Especialistas em obras, reformas e acabamentos com alta produtividade e qualidade.
+</p>
 
-  </section>
 
-  <section id="servicos">
+<a class="btn" href="zap.html">
+WhatsApp
+</a>
 
-    <h2 class="title">
-      Nossos serviços
-    </h2>
 
-    <div class="servicos">
+<a class="btn" href="insta.html">
+Instagram
+</a>
 
-      <div class="card">
-        <h3>Construção</h3>
-        <p>Projetos residenciais e comerciais.</p>
-      </div>
 
-      <div class="card">
-        <h3>Reformas</h3>
-        <p>Modernização e revitalização de ambientes.</p>
-      </div>
+</div>
 
-      <div class="card">
-        <h3>Acabamentos</h3>
-        <p>Qualidade e atenção aos detalhes.</p>
-      </div>
 
-      <div class="card">
-        <h3>Pintura</h3>
-        <p>Serviços profissionais internos e externos.</p>
-      </div>
+</section>
 
-    </div>
 
-  </section>
 
-  <section id="contato" class="contato">
 
-    <h2 class="title">
-      Entre em contato
-    </h2>
 
-    <p>
-      Solicite seu orçamento pelo WhatsApp ou Instagram.
-    </p>
 
-    <a class="btn" href="zap.html">
-      Instagram
-    </a>
+<section id="sobre">
 
-    <a class="btn" href="insta.html">
-      WhatsApp
-    </a>
 
-  </section>
+<h2 class="title">
+Sobre a Poderone
+</h2>
 
-  <footer>
-    © 2026 ARXX Obras — Todos os direitos reservados
-  </footer>
 
-  <a class="whatsapp" href="zap.html">
-    ☎
-  </a>
+<p>
+
+A PODERONE CONSTRUÇÕES é especialista em soluções modernas para construção civil,
+oferecendo projetos residenciais e comerciais com inovação, qualidade e eficiência.
+
+<br><br>
+
+Com uma equipe qualificada e foco em excelência, a empresa entrega construções
+mais rápidas, eficientes e com alto desempenho, utilizando tecnologias construtivas
+avançadas como o sistema ICF ARXX.
+
+<br><br>
+
+Seu compromisso é transformar sonhos em realidade, unindo tecnologia,
+qualidade e excelência em cada etapa da obra.
+
+</p>
+
+
+</section>
+
+
+
+
+
+
+<section id="projetos">
+
+
+<h2 class="title">
+Projetos realizados
+</h2>
+
+
+<div class="galeria">
+
+
+<img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200">
+
+
+<img src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?q=80&w=1200">
+
+
+<img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200">
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<section id="servicos">
+
+
+<h2 class="title">
+Nossos serviços
+</h2>
+
+
+<div class="servicos">
+
+
+<div class="card">
+
+<h3>
+Construção
+</h3>
+
+<p>
+Projetos residenciais e comerciais.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+Reformas
+</h3>
+
+<p>
+Modernização e revitalização de ambientes.
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>
+Acabamentos
+</h3>
+
+<p>
+Qualidade e atenção aos detalhes.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+Pintura
+</h3>
+
+<p>
+Serviços profissionais internos e externos.
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<section id="contato">
+
+
+<h2 class="title">
+Entre em contato
+</h2>
+
+
+<p>
+Solicite seu orçamento pelo WhatsApp ou Instagram.
+</p>
+
+
+<br>
+
+
+<a class="btn" href="zap.html">
+WhatsApp
+</a>
+
+
+<a class="btn" href="insta.html">
+Instagram
+</a>
+
+
+</section>
+
+
 
 </body>
+
 </html>
