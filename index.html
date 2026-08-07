@@ -44,7 +44,6 @@ header {
     color: white;
 }
 
-
 nav a {
     color: white;
     text-decoration: none;
@@ -57,12 +56,12 @@ nav a:hover {
 }
 
 
-
 /* HERO */
 
 .hero {
 
     height: 100vh;
+
     background:
     linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
     url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1600");
@@ -70,247 +69,271 @@ nav a:hover {
     background-size: cover;
     background-position: center;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 
 }
-
 
 .hero-content {
-
-    max-width:700px;
-
+    max-width: 700px;
 }
-
 
 .hero h1 {
-
-    font-size:55px;
-    margin-bottom:20px;
-
+    font-size: 55px;
+    margin-bottom: 20px;
 }
-
 
 .hero p {
-
-    font-size:20px;
-    color:#ddd;
-    margin-bottom:35px;
-
+    font-size: 20px;
+    color: #ddd;
+    margin-bottom: 35px;
 }
 
+
+/* BOTÕES */
 
 .btn {
 
-    display:inline-block;
-    background:white;
-    color:black;
+    display: inline-block;
 
-    padding:15px 35px;
+    background: white;
+    color: black;
 
-    border-radius:30px;
+    padding: 15px 35px;
 
-    text-decoration:none;
+    border-radius: 30px;
 
-    margin:10px;
+    text-decoration: none;
 
-    font-weight:bold;
+    margin: 10px;
 
-    transition:.3s;
+    font-weight: bold;
+
+    transition: .3s;
 
 }
-
 
 .btn:hover {
 
-    transform:translateY(-5px);
-    background:#ddd;
+    transform: translateY(-5px);
+    background: #ddd;
 
 }
-
 
 
 /* SEÇÕES */
 
-
 section {
-
-    padding:80px 10%;
-
+    padding: 80px 10%;
 }
-
 
 .title {
 
-    text-align:center;
+    text-align: center;
 
-    font-size:35px;
+    font-size: 35px;
 
-    margin-bottom:30px;
+    margin-bottom: 30px;
 
 }
-
-
 
 section p {
 
-    max-width:900px;
+    max-width: 900px;
 
-    margin:auto;
+    margin: auto;
 
-    line-height:1.8;
+    line-height: 1.8;
 
-    color:#ccc;
+    color: #ccc;
 
-    text-align:center;
+    text-align: center;
 
 }
 
+
+/* DIFERENCIAL */
+
+.diferenciais {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+    margin-top: 40px;
+
+}
+
+.diferencial {
+
+    background: #1b1b1b;
+
+    padding: 30px 20px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    transition: .3s;
+
+}
+
+.diferencial:hover {
+
+    transform: translateY(-5px);
+
+    background: #222;
+
+}
+
+.diferencial h3 {
+
+    margin-bottom: 15px;
+
+    font-size: 21px;
+
+}
+
+.diferencial p {
+
+    color: #aaa;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+}
 
 
 /* GALERIA */
 
-
 .galeria {
 
-    display:grid;
+    display: grid;
 
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
 
-    gap:20px;
+    gap: 20px;
 
-    margin-top:40px;
+    margin-top: 40px;
 
 }
-
 
 .galeria img {
 
-    width:100%;
+    width: 100%;
 
-    height:250px;
+    height: 250px;
 
-    object-fit:cover;
+    object-fit: cover;
 
-    border-radius:15px;
+    border-radius: 15px;
 
 }
-
 
 
 /* SERVIÇOS */
 
-
 .servicos {
 
-    display:grid;
+    display: grid;
 
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
 
-    gap:20px;
+    gap: 20px;
 
-    margin-top:40px;
+    margin-top: 40px;
 
 }
-
 
 .card {
 
-    background:#1b1b1b;
+    background: #1b1b1b;
 
-    padding:30px;
+    padding: 30px;
 
-    border-radius:15px;
+    border-radius: 15px;
 
-    text-align:center;
+    text-align: center;
 
 }
-
 
 .card h3 {
 
-    margin-bottom:15px;
+    margin-bottom: 15px;
 
 }
-
 
 .card p {
 
-    color:#aaa;
+    color: #aaa;
 
 }
-
-
 
 
 /* CONTATO */
 
-
 #contato {
 
-    text-align:center;
+    text-align: center;
 
-    padding-bottom:100px;
+    padding-bottom: 100px;
 
 }
-
 
 
 /* MOBILE */
 
+@media(max-width: 900px) {
 
-@media(max-width:900px){
+    header {
 
+        flex-direction: column;
 
-header {
+    }
 
-    flex-direction:column;
+    nav {
+
+        margin-top: 15px;
+
+    }
+
+    .hero h1 {
+
+        font-size: 38px;
+
+    }
+
+    .galeria {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .servicos {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .diferenciais {
+
+        grid-template-columns: 1fr;
+
+    }
 
 }
-
-
-nav {
-
-    margin-top:15px;
-
-}
-
-
-.hero h1 {
-
-    font-size:38px;
-
-}
-
-
-.galeria {
-
-    grid-template-columns:1fr;
-
-}
-
-
-.servicos {
-
-    grid-template-columns:1fr;
-
-}
-
-
-}
-
-
 
 </style>
-
 
 </head>
 
 
 <body>
-
 
 
 <header>
@@ -319,10 +342,11 @@ nav {
 PODERONE
 </div>
 
-
 <nav>
 
 <a href="#sobre">Sobre</a>
+
+<a href="#diferencial">Diferencial</a>
 
 <a href="#projetos">Projetos</a>
 
@@ -332,56 +356,43 @@ PODERONE
 
 </nav>
 
-
 </header>
 
 
-
-
+<!-- HERO -->
 
 <section class="hero">
 
-
 <div class="hero-content">
-
 
 <h1>
 Construindo resultados reais
 </h1>
 
-
 <p>
 Especialistas em obras, reformas e acabamentos com alta produtividade e qualidade.
 </p>
-
 
 <a class="btn" href="zap.html">
 WhatsApp
 </a>
 
-
 <a class="btn" href="insta.html">
 Instagram
 </a>
 
-
 </div>
-
 
 </section>
 
 
-
-
-
+<!-- SOBRE -->
 
 <section id="sobre">
-
 
 <h2 class="title">
 Sobre a Poderone
 </h2>
-
 
 <p>
 
@@ -401,51 +412,114 @@ qualidade e excelência em cada etapa da obra.
 
 </p>
 
+</section>
+
+
+<!-- DIFERENCIAL -->
+
+<section id="diferencial">
+
+<h2 class="title">
+O diferencial da PODERONE
+</h2>
+
+<p>
+
+Na PODERONE, cada projeto é pensado para unir tecnologia, eficiência,
+qualidade e segurança, proporcionando uma experiência de construção
+mais moderna e resultados de alto padrão.
+
+</p>
+
+
+<div class="diferenciais">
+
+
+<div class="diferencial">
+
+<h3>
+Tecnologia
+</h3>
+
+<p>
+Utilização de soluções construtivas modernas para tornar cada projeto mais eficiente e inovador.
+</p>
+
+</div>
+
+
+<div class="diferencial">
+
+<h3>
+Produtividade
+</h3>
+
+<p>
+Métodos construtivos que ajudam a otimizar processos e reduzir o tempo de execução das obras.
+</p>
+
+</div>
+
+
+<div class="diferencial">
+
+<h3>
+Qualidade
+</h3>
+
+<p>
+Compromisso com materiais, execução e acabamentos de qualidade em cada etapa do projeto.
+</p>
+
+</div>
+
+
+<div class="diferencial">
+
+<h3>
+Desempenho
+</h3>
+
+<p>
+Soluções que buscam oferecer mais conforto, eficiência e desempenho para cada construção.
+</p>
+
+</div>
+
+
+</div>
 
 </section>
 
 
-
-
-
+<!-- PROJETOS -->
 
 <section id="projetos">
-
 
 <h2 class="title">
 Projetos realizados
 </h2>
 
-
 <div class="galeria">
-
 
 <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200">
 
-
 <img src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?q=80&w=1200">
-
 
 <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200">
 
-
 </div>
-
 
 </section>
 
 
-
-
-
+<!-- SERVIÇOS -->
 
 <section id="servicos">
-
 
 <h2 class="title">
 Nossos serviços
 </h2>
-
 
 <div class="servicos">
 
@@ -463,7 +537,6 @@ Projetos residenciais e comerciais.
 </div>
 
 
-
 <div class="card">
 
 <h3>
@@ -475,8 +548,6 @@ Modernização e revitalização de ambientes.
 </p>
 
 </div>
-
-
 
 
 <div class="card">
@@ -492,7 +563,6 @@ Qualidade e atenção aos detalhes.
 </div>
 
 
-
 <div class="card">
 
 <h3>
@@ -506,45 +576,34 @@ Serviços profissionais internos e externos.
 </div>
 
 
-
 </div>
-
 
 </section>
 
 
-
-
-
+<!-- CONTATO -->
 
 <section id="contato">
-
 
 <h2 class="title">
 Entre em contato
 </h2>
 
-
 <p>
 Solicite seu orçamento pelo WhatsApp ou Instagram.
 </p>
 
-
 <br>
-
 
 <a class="btn" href="zap.html">
 WhatsApp
 </a>
 
-
 <a class="btn" href="insta.html">
 Instagram
 </a>
 
-
 </section>
-
 
 
 </body>
