@@ -258,6 +258,73 @@ section p {
 }
 
 
+/* TELA CHEIA */
+
+#imagemFullscreen {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.96);
+
+    z-index: 9999;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+}
+
+#imagemFullscreen img {
+
+    max-width: 95%;
+    max-height: 90vh;
+
+    object-fit: contain;
+
+    border-radius: 8px;
+
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+
+}
+
+.fechar {
+
+    position: absolute;
+
+    top: 20px;
+    right: 30px;
+
+    font-size: 45px;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-weight: 300;
+
+    line-height: 1;
+
+    transition: 0.3s;
+
+}
+
+.fechar:hover {
+
+    color: #aaa;
+
+    transform: scale(1.1);
+
+}
+
+
 /* SERVIÇOS */
 
 .servicos {
@@ -368,6 +435,27 @@ section p {
     .diferenciais {
 
         grid-template-columns: 1fr;
+
+    }
+
+    #imagemFullscreen {
+
+        padding: 15px;
+
+    }
+
+    #imagemFullscreen img {
+
+        max-width: 100%;
+        max-height: 85vh;
+
+    }
+
+    .fechar {
+
+        top: 15px;
+        right: 20px;
+        font-size: 40px;
 
     }
 
@@ -550,21 +638,35 @@ Projetos realizados
 <img
     src="projeto-1.jpeg"
     alt="Projeto realizado pela Poderone"
+    onclick="abrirImagem(this)"
 >
 
 <img
     src="projeto-2.jpeg"
     alt="Obra realizada pela Poderone"
+    onclick="abrirImagem(this)"
 >
 
 <img
     src="projeto-3.jpeg"
     alt="Construção realizada pela Poderone"
+    onclick="abrirImagem(this)"
 >
 
 </div>
 
 </section>
+
+
+<!-- TELA CHEIA -->
+
+<div id="imagemFullscreen" onclick="fecharImagem()">
+
+<span class="fechar">&times;</span>
+
+<img id="imagemGrande" src="" alt="Imagem ampliada">
+
+</div>
 
 
 <!-- SERVIÇOS -->
@@ -658,6 +760,52 @@ Instagram
 </a>
 
 </section>
+
+
+<script>
+
+/* ABRIR IMAGEM */
+
+function abrirImagem(imagem) {
+
+    const tela = document.getElementById("imagemFullscreen");
+    const imagemGrande = document.getElementById("imagemGrande");
+
+    imagemGrande.src = imagem.src;
+
+    tela.style.display = "flex";
+
+    document.body.style.overflow = "hidden";
+
+}
+
+
+/* FECHAR IMAGEM */
+
+function fecharImagem() {
+
+    const tela = document.getElementById("imagemFullscreen");
+
+    tela.style.display = "none";
+
+    document.body.style.overflow = "auto";
+
+}
+
+
+/* FECHAR COM ESC */
+
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+
+        fecharImagem();
+
+    }
+
+});
+
+</script>
 
 
 </body>
