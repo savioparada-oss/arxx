@@ -24,24 +24,38 @@ body {
 }
 
 
-/* MENU */
+/* =========================
+   MENU
+========================= */
 
 header {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 20px 8%;
+    padding: 15px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(0,0,0,0.8);
-    z-index: 10;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(10px);
+    z-index: 100;
 }
 
-.logo {
-    font-size: 28px;
-    font-weight: bold;
-    color: white;
+
+/* LOGO */
+
+.logo img {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+
+
+/* MENU */
+
+nav {
+    display: flex;
+    align-items: center;
 }
 
 nav a {
@@ -57,7 +71,9 @@ nav a:hover {
 }
 
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero {
 
@@ -93,7 +109,9 @@ nav a:hover {
 }
 
 
-/* BOTÕES */
+/* =========================
+   BOTÕES
+========================= */
 
 .btn {
 
@@ -119,12 +137,15 @@ nav a:hover {
 .btn:hover {
 
     transform: translateY(-5px);
+
     background: #ddd;
 
 }
 
 
-/* SEÇÕES */
+/* =========================
+   SEÇÕES
+========================= */
 
 section {
     padding: 80px 10%;
@@ -155,7 +176,9 @@ section p {
 }
 
 
-/* DIFERENCIAL */
+/* =========================
+   DIFERENCIAIS
+========================= */
 
 .diferenciais {
 
@@ -210,7 +233,9 @@ section p {
 }
 
 
-/* GALERIA */
+/* =========================
+   GALERIA
+========================= */
 
 .galeria {
 
@@ -258,7 +283,9 @@ section p {
 }
 
 
-/* TELA CHEIA */
+/* =========================
+   TELA CHEIA
+========================= */
 
 #imagemFullscreen {
 
@@ -271,11 +298,12 @@ section p {
     width: 100%;
     height: 100%;
 
-    background: rgba(0, 0, 0, 0.96);
+    background: rgba(0,0,0,0.96);
 
     z-index: 9999;
 
     align-items: center;
+
     justify-content: center;
 
     padding: 30px;
@@ -285,6 +313,7 @@ section p {
 #imagemFullscreen img {
 
     max-width: 95%;
+
     max-height: 90vh;
 
     object-fit: contain;
@@ -300,6 +329,7 @@ section p {
     position: absolute;
 
     top: 20px;
+
     right: 30px;
 
     font-size: 45px;
@@ -312,7 +342,7 @@ section p {
 
     line-height: 1;
 
-    transition: 0.3s;
+    transition: .3s;
 
 }
 
@@ -325,7 +355,9 @@ section p {
 }
 
 
-/* SERVIÇOS */
+/* =========================
+   SERVIÇOS
+========================= */
 
 .servicos {
 
@@ -374,7 +406,9 @@ section p {
 }
 
 
-/* CONTATO */
+/* =========================
+   CONTATO
+========================= */
 
 #contato {
 
@@ -385,7 +419,9 @@ section p {
 }
 
 
-/* MOBILE */
+/* =========================
+   CELULAR
+========================= */
 
 @media(max-width: 900px) {
 
@@ -393,18 +429,29 @@ section p {
 
         flex-direction: column;
 
+        padding: 15px 5%;
+
     }
 
     nav {
 
-        margin-top: 15px;
+        margin-top: 12px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
 
     }
 
     nav a {
 
-        margin-left: 10px;
-        margin-right: 10px;
+        margin: 5px 10px;
+
+    }
+
+    .logo img {
+
+        width: 130px;
 
     }
 
@@ -447,6 +494,7 @@ section p {
     #imagemFullscreen img {
 
         max-width: 100%;
+
         max-height: 85vh;
 
     }
@@ -454,7 +502,9 @@ section p {
     .fechar {
 
         top: 15px;
+
         right: 20px;
+
         font-size: 40px;
 
     }
@@ -469,30 +519,49 @@ section p {
 <body>
 
 
+<!-- =========================
+     MENU
+========================= -->
+
 <header>
 
 <div class="logo">
-PODERONE
+
+<img src="logo.png" alt="Poderone">
+
 </div>
+
 
 <nav>
 
-<a href="#sobre">Sobre</a>
+<a href="#sobre">
+Sobre
+</a>
 
-<a href="#diferencial">Diferencial</a>
+<a href="#diferencial">
+Diferencial
+</a>
 
-<a href="#projetos">Projetos</a>
+<a href="#projetos">
+Projetos
+</a>
 
-<a href="#servicos">Serviços</a>
+<a href="#servicos">
+Serviços
+</a>
 
-<a href="#contato">Contato</a>
+<a href="#contato">
+Contato
+</a>
 
 </nav>
 
 </header>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
@@ -519,7 +588,9 @@ Instagram
 </section>
 
 
-<!-- SOBRE -->
+<!-- =========================
+     SOBRE
+========================= -->
 
 <section id="sobre">
 
@@ -548,7 +619,9 @@ qualidade e excelência em cada etapa da obra.
 </section>
 
 
-<!-- DIFERENCIAL -->
+<!-- =========================
+     DIFERENCIAL
+========================= -->
 
 <section id="diferencial">
 
@@ -625,7 +698,9 @@ Soluções que buscam oferecer mais conforto, eficiência e desempenho para cada
 </section>
 
 
-<!-- PROJETOS -->
+<!-- =========================
+     PROJETOS
+========================= -->
 
 <section id="projetos">
 
@@ -633,49 +708,69 @@ Soluções que buscam oferecer mais conforto, eficiência e desempenho para cada
 Projetos realizados
 </h2>
 
+
 <div class="galeria">
 
-<img
-    src="projeto-1.jpeg"
-    alt="Projeto realizado pela Poderone"
-    onclick="abrirImagem(this)"
->
 
 <img
-    src="projeto-2.jpeg"
-    alt="Obra realizada pela Poderone"
-    onclick="abrirImagem(this)"
+src="projeto-1.jpeg"
+alt="Projeto realizado pela Poderone"
+onclick="abrirImagem(this)"
 >
 
+
 <img
-    src="projeto-3.jpeg"
-    alt="Construção realizada pela Poderone"
-    onclick="abrirImagem(this)"
+src="projeto-2.jpeg"
+alt="Obra realizada pela Poderone"
+onclick="abrirImagem(this)"
 >
+
+
+<img
+src="projeto-3.jpeg"
+alt="Construção realizada pela Poderone"
+onclick="abrirImagem(this)"
+>
+
 
 </div>
 
 </section>
 
 
-<!-- TELA CHEIA -->
+<!-- =========================
+     TELA CHEIA
+========================= -->
 
-<div id="imagemFullscreen" onclick="fecharImagem()">
+<div
+id="imagemFullscreen"
+onclick="fecharImagem()"
+>
 
-<span class="fechar">&times;</span>
+<span class="fechar">
+&times;
+</span>
 
-<img id="imagemGrande" src="" alt="Imagem ampliada">
+
+<img
+id="imagemGrande"
+src=""
+alt="Imagem ampliada"
+>
 
 </div>
 
 
-<!-- SERVIÇOS -->
+<!-- =========================
+     SERVIÇOS
+========================= -->
 
 <section id="servicos">
 
 <h2 class="title">
 Nossos serviços
 </h2>
+
 
 <div class="servicos">
 
@@ -737,7 +832,9 @@ Serviços profissionais internos e externos.
 </section>
 
 
-<!-- CONTATO -->
+<!-- =========================
+     CONTATO
+========================= -->
 
 <section id="contato">
 
@@ -751,9 +848,11 @@ Solicite seu orçamento pelo WhatsApp ou Instagram.
 
 <br>
 
+
 <a class="btn" href="zap.html">
 WhatsApp
 </a>
+
 
 <a class="btn" href="insta.html">
 Instagram
@@ -762,48 +861,59 @@ Instagram
 </section>
 
 
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
 <script>
 
-/* ABRIR IMAGEM */
 
 function abrirImagem(imagem) {
 
-    const tela = document.getElementById("imagemFullscreen");
-    const imagemGrande = document.getElementById("imagemGrande");
+    const tela =
+        document.getElementById("imagemFullscreen");
 
-    imagemGrande.src = imagem.src;
+    const imagemGrande =
+        document.getElementById("imagemGrande");
 
-    tela.style.display = "flex";
+    imagemGrande.src =
+        imagem.src;
 
-    document.body.style.overflow = "hidden";
+    tela.style.display =
+        "flex";
+
+    document.body.style.overflow =
+        "hidden";
 
 }
 
-
-/* FECHAR IMAGEM */
 
 function fecharImagem() {
 
-    const tela = document.getElementById("imagemFullscreen");
+    const tela =
+        document.getElementById("imagemFullscreen");
 
-    tela.style.display = "none";
+    tela.style.display =
+        "none";
 
-    document.body.style.overflow = "auto";
+    document.body.style.overflow =
+        "auto";
 
 }
 
 
-/* FECHAR COM ESC */
+document.addEventListener(
+    "keydown",
+    function(event) {
 
-document.addEventListener("keydown", function(event) {
+        if (event.key === "Escape") {
 
-    if (event.key === "Escape") {
+            fecharImagem();
 
-        fecharImagem();
+        }
 
     }
-
-});
+);
 
 </script>
 
